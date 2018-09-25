@@ -2,8 +2,8 @@ const mysql = require('mysql');
 
 const connection = mysql.createConnection({
   host     : 'commentsdb.crly8spugqpt.us-east-2.rds.amazonaws.com',
-  user     : 'spencerkwok',
-  password : 'spencerkwok',
+  user     : '',
+  password : '',
   port     : '3306',
   database : 'comments',
 });

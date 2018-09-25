@@ -18,9 +18,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // const parsed = queryString.parse(location.search);
-    // // console.log(parsed.id);
-    // this.fetch(Number(parsed.id));
     const url = window.location.href;
     let endpoint = url.split('/');
     endpoint = endpoint[endpoint.length - 2];
@@ -28,19 +25,9 @@ class App extends React.Component {
   }
 
   fetch(songid) {
-    // $.ajax({
-    //   method: 'GET',
-    //   url: `http://localhost:3001/api/${songid}`,
-    //   success: (data) => {
-    //     this.reformatData(data);
-    //   },
-    //   error: (error) => {
-    //     console.log('error  ', error);
-    //   },
-    // });
     $.ajax({
       method: 'GET',
-      url: `/comments/${songid}`,
+      url: `/api/comments/${songid}`,
       success: (data) => {
         this.reformatData(data);
       },
